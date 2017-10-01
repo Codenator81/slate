@@ -222,6 +222,9 @@
             <a href="#intro" class="toc-h1 toc-link" data-title="Intro">Intro</a>
           </li>
           <li>
+            <a href="#optionals" class="toc-h1 toc-link" data-title="Optionals">Optionals</a>
+          </li>
+          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
@@ -251,6 +254,24 @@
       <div class="content">
         <h1 id='intro'>Intro</h1>
 <p>Swift and iOS cheat sheet</p>
+<h1 id='optionals'>Optionals</h1>
+<blockquote>
+<p>The next several code snippets demonstrate how optional chaining differs from forced unwrapping and enables you to check for success.
+First, two classes called Person and Residence are defined:</p>
+</blockquote>
+<pre class="highlight swift tab-swift"><code><span class="kd">class</span> <span class="kt">Person</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">residence</span><span class="p">:</span> <span class="kt">Residence</span><span class="p">?</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">Residence</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">numberOfRooms</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre>
+<p>You specify optional chaining by placing a question mark (?) after the optional value on which you wish to call a property, method or subscript if the optional is non-nil. This is very similar to placing an exclamation mark (!) after an optional value to force the unwrapping of its value. The main difference is that optional chaining fails gracefully when the optional is nil, whereas forced unwrapping triggers a runtime error when the optional is nil.</p>
+
+<p>To reflect the fact that optional chaining can be called on a nil value, the result of an optional chaining call is always an optional value, even if the property, method, or subscript you are querying returns a nonoptional value. You can use this optional return value to check whether the optional chaining call was successful (the returned optional contains a value), or did not succeed due to a nil value in the chain (the returned optional value is nil).</p>
+
+<p>Specifically, the result of an optional chaining call is of the same type as the expected return value, but wrapped in an optional. A property that normally returns an Int will return an Int? when accessed through optional chaining.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
