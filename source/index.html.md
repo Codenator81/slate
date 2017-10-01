@@ -15,7 +15,10 @@ search: true
 
 # Intro
 
-Swift and iOS cheat sheet
+Swift and iOS cheatsheet
+
+Main links:
+[Apple Documentation Swift 4](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html)
 
 # Optionals
 
