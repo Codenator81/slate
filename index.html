@@ -243,6 +243,14 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#generics" class="toc-h1 toc-link" data-title="Generics">Generics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#constraints" class="toc-h2 toc-link" data-title="Generics">Constraints</a>
+                  </li>
+              </ul>
+          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='https://github.com/tripit/slate'>CheatSheet Powered by Codenator</a></li>
@@ -277,6 +285,8 @@
 </blockquote>
 <pre class="highlight swift tab-swift"><code><span class="kd">extension</span> <span class="kt">MyProtocol</span> <span class="k">where</span> <span class="k">Self</span><span class="p">:</span> <span class="kt">MyAnotherProtocol</span> <span class="p">{</span>
 <span class="c1">//Extension code here</span>
+<span class="p">}</span>
+</code></pre><h1 id='generics'>Generics</h1><h2 id='constraints'>Constraints</h2><pre class="highlight swift tab-swift"><code><span class="kd">func</span> <span class="n">fooFunction</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">MyClass</span><span class="p">,</span> <span class="kt">E</span><span class="p">:</span> <span class="kt">MyProtocol</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">a</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre>
       </div>
