@@ -7,9 +7,6 @@ language_tabs: # must be one of https://git.io/vQNgJ
 toc_footers:
   - <a href='https://github.com/tripit/slate'>CheatSheet Powered by Codenator</a>
 
-includes:
-  - errors
-
 search: true
 ---
 
