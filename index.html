@@ -258,16 +258,14 @@
 <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html">Apple Documentation Swift 4</a></p>
 <h1 id='optional'>Optional</h1><h2 id='unwrap'>Unwrap</h2>
 <blockquote>
-<p>if way
-```swift
-@IBOutlet var messageLabel: UILabel?</p>
+<p>if way</p>
 </blockquote>
+<pre class="highlight swift tab-swift"><code><span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">messageLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="p">?</span>
 
-<p>if let messageLabel = messageLabel {
-    messageLabel
-}
-```</p>
-<h1 id='protocol'>Protocol</h1><h2 id='simple'>Simple</h2><pre class="highlight swift tab-swift"><code><span class="kd">protocol</span> <span class="kt">MyProtocol</span> <span class="p">{</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">messageLabel</span> <span class="o">=</span> <span class="n">messageLabel</span> <span class="p">{</span>
+    <span class="n">messageLabel</span>
+<span class="p">}</span>
+</code></pre><h1 id='protocol'>Protocol</h1><h2 id='simple'>Simple</h2><pre class="highlight swift tab-swift"><code><span class="kd">protocol</span> <span class="kt">MyProtocol</span> <span class="p">{</span>
 <span class="c1">//Protocol code here</span>
 <span class="p">}</span>
 </code></pre><h2 id='extension'>Extension</h2><pre class="highlight swift tab-swift"><code><span class="kd">extension</span> <span class="kt">MyProtocol</span> <span class="p">{</span>
