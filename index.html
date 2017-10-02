@@ -222,10 +222,26 @@
             <a href="#intro" class="toc-h1 toc-link" data-title="Intro">Intro</a>
           </li>
           <li>
-            <a href="#optionals" class="toc-h1 toc-link" data-title="Optionals">Optionals</a>
+            <a href="#optional" class="toc-h1 toc-link" data-title="Optional">Optional</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#unwrap" class="toc-h2 toc-link" data-title="Optional">Unwrap</a>
+                  </li>
+              </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#protocol" class="toc-h1 toc-link" data-title="Protocol">Protocol</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#simple" class="toc-h2 toc-link" data-title="Protocol">Simple</a>
+                  </li>
+                  <li>
+                    <a href="#extension" class="toc-h2 toc-link" data-title="Protocol">Extension</a>
+                  </li>
+                  <li>
+                    <a href="#extension-constraints" class="toc-h2 toc-link" data-title="Protocol">Extension constraints</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
@@ -240,75 +256,31 @@
 
 <p>Main links:
 <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html">Apple Documentation Swift 4</a></p>
-<h1 id='optionals'>Optionals</h1>
+<h1 id='optional'>Optional</h1><h2 id='unwrap'>Unwrap</h2>
 <blockquote>
-<p>The next several code snippets demonstrate how optional chaining differs from forced unwrapping and enables you to check for success.
-First, two classes called Person and Residence are defined:</p>
+<p>if way
+```swift
+@IBOutlet var messageLabel: UILabel?</p>
 </blockquote>
-<pre class="highlight swift tab-swift"><code><span class="kd">class</span> <span class="kt">Person</span> <span class="p">{</span>
-    <span class="k">var</span> <span class="nv">residence</span><span class="p">:</span> <span class="kt">Residence</span><span class="p">?</span>
+
+<p>if let messageLabel = messageLabel {
+    messageLabel
+}
+```</p>
+<h1 id='protocol'>Protocol</h1><h2 id='simple'>Simple</h2><pre class="highlight swift tab-swift"><code><span class="kd">protocol</span> <span class="kt">MyProtocol</span> <span class="p">{</span>
+<span class="c1">//Protocol code here</span>
 <span class="p">}</span>
-
-<span class="kd">class</span> <span class="kt">Residence</span> <span class="p">{</span>
-    <span class="k">var</span> <span class="nv">numberOfRooms</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre><h2 id='extension'>Extension</h2><pre class="highlight swift tab-swift"><code><span class="kd">extension</span> <span class="kt">MyProtocol</span> <span class="p">{</span>
+<span class="c1">//Extension code here</span>
 <span class="p">}</span>
-</code></pre><h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
-
+</code></pre><h2 id='extension-constraints'>Extension constraints</h2>
+<blockquote>
+<p>only types that also conform to the MyAnotherProtocol protocol will receive the functionality defined in the extension</p>
+</blockquote>
+<pre class="highlight swift tab-swift"><code><span class="kd">extension</span> <span class="kt">MyProtocol</span> <span class="k">where</span> <span class="k">Self</span><span class="p">:</span> <span class="kt">MyAnotherProtocol</span> <span class="p">{</span>
+<span class="c1">//Extension code here</span>
+<span class="p">}</span>
+</code></pre>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
