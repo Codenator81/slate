@@ -22,6 +22,7 @@ Main links:
 ## Unwrap
 
 > if way
+
 ```swift
 @IBOutlet var messageLabel: UILabel?
 
@@ -29,7 +30,6 @@ if let messageLabel = messageLabel {
     messageLabel
 }
 ```
-
 
 # Protocol
 
