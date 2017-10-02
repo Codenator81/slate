@@ -58,3 +58,12 @@ extension MyProtocol where Self: MyAnotherProtocol {
 //Extension code here
 }
 ```
+
+# Generics
+
+## Constraints
+
+```swift
+func fooFunction<T: MyClass, E: MyProtocol>(a: T, b: E) {
+}
+```
