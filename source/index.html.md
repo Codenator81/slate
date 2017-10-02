@@ -20,17 +20,44 @@ Swift and iOS cheatsheet
 Main links:
 [Apple Documentation Swift 4](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html)
 
-# Optionals
+# Optional
 
-> The next several code snippets demonstrate how optional chaining differs from forced unwrapping and enables you to check for success.
-> First, two classes called Person and Residence are defined:
+## Unwrap
+
+> if way
+```swift
+@IBOutlet var messageLabel: UILabel?
+
+if let messageLabel = messageLabel {
+    messageLabel
+}
+```
+
+
+# Protocol
+
+## Simple
 
 ```swift
-class Person {
-    var residence: Residence?
+protocol MyProtocol {
+//Protocol code here
 }
+```
 
-class Residence {
-    var numberOfRooms = 1
+## Extension
+
+```swift
+extension MyProtocol {
+//Extension code here
+}
+```
+
+## Extension constraints
+
+> only types that also conform to the MyAnotherProtocol protocol will receive the functionality defined in the extension
+
+```swift
+extension MyProtocol where Self: MyAnotherProtocol {
+//Extension code here
 }
 ```
